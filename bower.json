@@ -1,0 +1,14 @@
+{
+  "name": "anguloader",
+  "version": "0.0.2",
+  "authors": [
+    "Zsolt Rádonyi <radonyi.zsolt@gmail.com>"
+  ],
+  "description": "AngularJS, and Bootstrap based Http loader",
+  "main": "./dist/angular-loader.min.js",
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "MIT",
+  "ignore": []
+}
