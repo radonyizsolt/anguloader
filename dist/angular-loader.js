@@ -25,7 +25,7 @@
                 }
             };
         }])
-        .factory('httpInterceptor', ['$q', '$rootScope', function ($q, $rootScope) {
+        .factory('anguloaderHttpInterceptor', ['$q', '$rootScope', function ($q, $rootScope) {
             var loadingCount = 0;
             return {
                 request: function (config) {
@@ -43,7 +43,7 @@
             };
         }])
         .config(['$httpProvider', function ($httpProvider, $http) {
-            $httpProvider.interceptors.push('httpInterceptor');
+            $httpProvider.interceptors.push('anguloaderHttpInterceptor');
         }])
         .service('anguloaderService', function ($rootScope, $timeout) {
             return {
