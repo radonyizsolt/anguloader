@@ -6,8 +6,6 @@ Angular component which shows a loader screen in case of a pending Http Request.
 Maintainer: Zsolt Rádonyi <<radonyi.zsolt@gmail.com>>
 
 
-This module requires the Angular-UI $modal service http://angular-ui.github.io/bootstrap/#/modal.
-
 Installation
 ------------
 

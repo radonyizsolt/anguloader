@@ -1,6 +1,9 @@
 (function () {
+    
+    //Angular component which shows a loader screen in case of a pending Http Request.
+    //Maintainer: Zsolt Rádonyi <<radonyi.zsolt@gmail.com>>
 
-    angular.module('anguloader', ['ui.bootstrap.modal'])
+    angular.module('anguloader', [])
         .value('defaultLoaderSpinner', '<i class="fa fa-spinner fa-spin fa-5x anguloader-icon"></i>')
 
     .directive('anguloader', ['defaultLoaderSpinner', function (defaultLoaderSpinner) {
