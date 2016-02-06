@@ -1,6 +1,7 @@
 {
   "name": "anguloader",
-  "version": "0.0.5",
+  "analytics":true,
+  "version": "0.0.6",
   "authors": [
     "Zsolt Rádonyi <radonyi.zsolt@gmail.com>"
   ],
