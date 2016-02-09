@@ -21,7 +21,7 @@ Usage
 Load angular-loader.min.js and angular-loader.min.css:
 
 ```html
-<link rel="stylesheet" href="path/to/dist/angular-loader.css" />
+<link rel="stylesheet" href="path/to/dist/angular-loader.min.css" />
 <script src="path/to/dist/angular-loader.min.js"></script>
 ```
 
@@ -47,32 +47,45 @@ As a Class:
 As a Tag:
 ```html
 <anguloader></anguloader>
+``` 
+
+Configuration
+-----
+
+### Config
+
+```javascript
+app.config(function(anguloaderConfigProvider){
+    anguloaderConfigProvider.setConfig({
+        backdrop: false,
+        loader: 'default'
+    });
+});
 ```
 
-### You don't like the default spinner icon?
+### Blacklist
 
-Just add some Html code inside your wrapper.
-
-As an attribute:
-```html
-<div anguloader><i>I am a spinner</i></div>
+```javascript
+app.config(function(anguloaderConfigProvider){
+    anguloaderConfigProvider.setBlackList([
+        "http://example.com",
+        "http://dummy.com"
+    ]);
+});
 ```
 
-As a Class:
-```html
-<div class="anguloader"><i>I am an other spinner</i></div>
+### Loader options
+```javascript
+    'default'
+    'waveform'
+    'cube'
+    'loading'
+    'sphere'
+    'square'
 ```
 
-As a Tag:
-```html
-<anguloader><i>Spinner, spinner, spinner</i></anguloader>
-```
+Future Plans
+-----
 
-### Early bird config 
-
-You can configurate the backdrop option just add a 
-```html 
-data-anguloader-backgrop="true/false"
-```
-attribute.
-
+- Add more loader icons
+- Prefix All css class

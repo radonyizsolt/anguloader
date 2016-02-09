@@ -1,0 +1,23 @@
+{
+    "sass.enabled": false,
+    "path": {
+        "scss/angular-loader.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../dist/",
+                "output": "angular-loader.min.css",
+                "includePaths": [],
+                "sourceComments": false,
+                "outputStyle": "compressed"
+            }
+        }
+    },
+    "brackets-minifier.on-save-project": false,
+    "brackets-minifier.js-project-minify": true,
+    "brackets-minifier.css-project-minify": false,
+    "brackets-minifier.js-custom-path": "",
+    "brackets-minifier.css-custom-path": "",
+    "brackets-minifier.project-exclude": "",
+    "brackets-minifier.js-mangle": false,
+    "brackets-minifier.js-compress": true
+}
