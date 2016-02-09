@@ -35,8 +35,8 @@
         })
         .directive('anguloader', ['anguloaderConfig', 'anguloaderSpinnerFactory', function (anguloaderConfig, anguloaderSpinnerFactory) {
             return {
-                restrict: 'AEC',
-                template: '<div ng-show="anguloader.show" class"anguloader"></div>',
+                restrict: 'AE',
+                template: '<div ng-show="anguloader.show" class="anguloader"></div>',
                 replace: true,
                 scope: true,
                 link: function (scope, element, attrs, ctrl) {

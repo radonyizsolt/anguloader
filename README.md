@@ -39,11 +39,6 @@ As an attribute:
 <div anguloader></div>
 ```
 
-As a Class:
-```html
-<div class="anguloader"></div>
-```
-
 As a Tag:
 ```html
 <anguloader></anguloader>
