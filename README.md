@@ -52,8 +52,9 @@ Configuration
 ```javascript
 app.config(function(anguloaderConfigProvider){
     anguloaderConfigProvider.setConfig({
-        backdrop: false,
-        loader: 'default'
+        backdrop: false, //true,false
+        loader: 'default', //default,waveform,cube,loading,sphere,square
+        timeout: 5000 //If request not responding
     });
 });
 ```
@@ -67,16 +68,6 @@ app.config(function(anguloaderConfigProvider){
         "http://dummy.com"
     ]);
 });
-```
-
-### Loader options
-```javascript
-    'default'
-    'waveform'
-    'cube'
-    'loading'
-    'sphere'
-    'square'
 ```
 
 Future Plans

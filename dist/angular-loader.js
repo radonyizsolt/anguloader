@@ -16,7 +16,8 @@
             var settings = {
                 config: {
                     backdrop: true,
-                    loader: 'default'
+                    loader: 'default',
+                    timeout: 5000
                 },
                 blacklist: [],
             };
