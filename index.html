@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Anguloader : Easy to use Http Loader for your Angular Js project">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Anguloader by radonyizsolt</title>
+    <title>Anguloader</title>
   </head>
 
   <body>
 
-    <header>
-      <div class="container">
-        <h1>Anguloader</h1>
-        <h2>Easy to use Http Loader for your Angular Js project</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/radonyizsolt/anguloader">View on GitHub</a>
 
-        <section id="downloads">
-          <a href="https://github.com/radonyizsolt/anguloader/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/radonyizsolt/anguloader/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/radonyizsolt/anguloader" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+          <h1 id="project_title">Anguloader</h1>
+          <h2 id="project_tagline">Easy to use Http Loader for your Angular Js project</h2>
 
-    <div class="container">
-      <section id="main_content">
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/radonyizsolt/anguloader/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/radonyizsolt/anguloader/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
-<a id="anguloader" class="anchor" href="#anguloader" aria-hidden="true"><span class="octicon octicon-link"></span></a>Anguloader</h1>
+<a id="anguloader" class="anchor" href="#anguloader" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Anguloader</h1>
 
 <p>Angular component which shows a loader screen in case of a pending Http Request.</p>
 
 <p>Maintainer: Zsolt Rádonyi &lt;<a href="mailto:radonyi.zsolt@gmail.com">radonyi.zsolt@gmail.com</a>&gt;</p>
 
-<p>This module requires the Angular-UI $modal service <a href="http://angular-ui.github.io/bootstrap/#/modal">http://angular-ui.github.io/bootstrap/#/modal</a>.</p>
-
 <h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
 
 <p>Bower:</p>
 
 <div class="highlight highlight-source-shell"><pre>bower install --save anguloader</pre></div>
 
 <h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
 <p>Load angular-loader.min.js and angular-loader.min.css:</p>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/dist/angular-loader.css<span class="pl-pds">"</span></span> /&gt;
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/dist/angular-loader.min.css<span class="pl-pds">"</span></span> /&gt;
 &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/dist/angular-loader.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
 
 <p>Add the <code>anguloader</code> module as a dependency in your application:</p>
 
-<div class="highlight highlight-source-js"><pre>angular.module(<span class="pl-s"><span class="pl-pds">'</span>demo<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>anguloader<span class="pl-pds">'</span></span>])</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">angular</span>.<span class="pl-en">module</span>(<span class="pl-s"><span class="pl-pds">'</span>demo<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>anguloader<span class="pl-pds">'</span></span>])</pre></div>
 
 <p>Add an HTML element with the <code>anguloader</code> directive. This will be displayed
 while requests are pending</p>
@@ -63,42 +64,53 @@ while requests are pending</p>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">anguloader</span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
-<p>As a Class:</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>anguloader<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
-
 <p>As a Tag:</p>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">anguloader</span>&gt;&lt;/<span class="pl-ent">anguloader</span>&gt;</pre></div>
 
-<h3>
-<a id="you-dont-like-the-default-spinner-icon" class="anchor" href="#you-dont-like-the-default-spinner-icon" aria-hidden="true"><span class="octicon octicon-link"></span></a>You don't like the default spinner icon?</h3>
-
-<p>Just add some Html code inside your wrapper.</p>
-
-<p>As an attribute:</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">anguloader</span>&gt;&lt;<span class="pl-ent">i</span>&gt;I am a spinner&lt;/<span class="pl-ent">i</span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
-
-<p>As a Class:</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>anguloader<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">i</span>&gt;I am an other spinner&lt;/<span class="pl-ent">i</span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
-
-<p>As a Tag:</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">anguloader</span>&gt;&lt;<span class="pl-ent">i</span>&gt;Spinner, spinner, spinner&lt;/<span class="pl-ent">i</span>&gt;&lt;/<span class="pl-ent">anguloader</span>&gt;</pre></div>
+<h2>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h2>
 
 <h3>
-<a id="early-bird-config" class="anchor" href="#early-bird-config" aria-hidden="true"><span class="octicon octicon-link"></span></a>Early bird config</h3>
+<a id="config" class="anchor" href="#config" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Config</h3>
 
-<p>You can configurate the backdrop option just add a </p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">app</span>.<span class="pl-en">config</span>(<span class="pl-k">function</span>(<span class="pl-smi">anguloaderConfigProvider</span>){
+    <span class="pl-smi">anguloaderConfigProvider</span>.<span class="pl-en">setConfig</span>({
+        backdrop<span class="pl-k">:</span> <span class="pl-c1">false</span>, <span class="pl-c">//true,false</span>
+        loader<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>default<span class="pl-pds">'</span></span>, <span class="pl-c">//default,waveform,cube,loading,sphere,square</span>
+        timeout<span class="pl-k">:</span> <span class="pl-c1">5000</span> <span class="pl-c">//If request not responding</span>
+    });
+});</pre></div>
 
-<div class="highlight highlight-text-html-basic"><pre>data-anguloader-backgrop="true/false"</pre></div>
+<h3>
+<a id="blacklist" class="anchor" href="#blacklist" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Blacklist</h3>
 
-<p>attribute.</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">app</span>.<span class="pl-en">config</span>(<span class="pl-k">function</span>(<span class="pl-smi">anguloaderConfigProvider</span>){
+    <span class="pl-smi">anguloaderConfigProvider</span>.<span class="pl-en">setBlackList</span>([
+        <span class="pl-s"><span class="pl-pds">"</span>http://example.com<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>http://dummy.com<span class="pl-pds">"</span></span>
+    ]);
+});</pre></div>
+
+<h2>
+<a id="future-plans" class="anchor" href="#future-plans" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Future Plans</h2>
+
+<ul>
+<li>Add more loader icons</li>
+<li>Prefix All css class</li>
+</ul>
       </section>
     </div>
 
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Anguloader maintained by <a href="https://github.com/radonyizsolt">radonyizsolt</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
     
+
   </body>
 </html>
