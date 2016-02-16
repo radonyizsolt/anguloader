@@ -101,7 +101,7 @@
         .config(['$httpProvider', 'anguloaderConfigProvider', function ($httpProvider, anguloaderConfigProvider) {
             $httpProvider.interceptors.push('anguloaderHttpInterceptor');
         }])
-        .service('anguloaderService', function ($rootScope, $timeout,anguloaderConfig) {
+        .service('anguloaderService', function ($rootScope, $timeout) {
             return {
                 show: function (timeout) {
                     $rootScope.anguloader = {
@@ -121,7 +121,7 @@
                     };
                 }
             }
-        }).run(['$rootScope', 'anguloaderService', function ($rootScope, anguloaderService) {
+        }).run(['$rootScope', 'anguloaderService','anguloaderConfig', function ($rootScope, anguloaderService,anguloaderConfig) {
             $rootScope.$on('loading:progress', function () {
                 anguloaderService.show(anguloaderConfig.config.timeout);
             });
