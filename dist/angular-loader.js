@@ -102,16 +102,16 @@
         }])
         .service('anguloaderService', function ($rootScope, $timeout,anguloaderConfig) {
             return {
-                show: function () {
+                show: function (timeout) {
                     $rootScope.anguloader = {
                         show: true
                     };
-                    if(anguloaderConfig.config.timeout != 0){
+                    if(timeout != 0){
                         $timeout(function () {
                             $rootScope.anguloader = {
                                 show: false
                             };
-                        }, anguloaderConfig.config.timeout || 5000);
+                        }, timeout || 5000);
                     }
                 },
                 hide: function () {
@@ -122,7 +122,7 @@
             }
         }).run(['$rootScope', 'anguloaderService', function ($rootScope, anguloaderService) {
             $rootScope.$on('loading:progress', function () {
-                anguloaderService.show();
+                anguloaderService.show(anguloaderConfig.config.timeout);
             });
 
             $rootScope.$on('loading:finish', function () {
