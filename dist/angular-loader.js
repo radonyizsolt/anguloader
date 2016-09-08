@@ -59,12 +59,16 @@
                     }
                     return config;
                 },
-                response: function (response) {
-                    if (--loadingCount === 0) $rootScope.$broadcast('loading:finish');
+                response     : function (response) {
+                    if (blacklist.indexOf(response.config.url) == -1) {
+                        if (--loadingCount === 0) $rootScope.$broadcast('loading:finish');
+                    }
                     return response;
                 },
                 responseError: function (rejection) {
-                    if (--loadingCount === 0) $rootScope.$broadcast('loading:finish');
+                    if (blacklist.indexOf(rejection.config.url) == -1) {
+                        if (--loadingCount === 0) $rootScope.$broadcast('loading:finish');
+                    }
                     return $q.reject(rejection);
                 }
             };
